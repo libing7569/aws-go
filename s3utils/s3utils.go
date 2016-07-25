@@ -113,7 +113,6 @@ func (s *S3utils) Info(bucket string) []Stat {
 		var sum int64 = 0
 		var num int = 0
 		for key := range sia {
-			// Print out each object key as its discovered
 			sum += key
 			num += 1
 		}
@@ -125,7 +124,6 @@ func (s *S3utils) Info(bucket string) []Stat {
 		var sum int64 = 0
 		var num int = 0
 		for key := range rr {
-			// Print out each object key as its discovered
 			sum += key
 			num += 1
 		}
@@ -139,9 +137,7 @@ func (s *S3utils) Info(bucket string) []Stat {
 
 	for t := range total {
 		myinfos = append(myinfos, t)
-		//if len(os.Args) >= 2 {
 		fmt.Printf("*bucket: %v, class: %v, num: %v, size %v\n", t.bucket, t.class, t.num, t.size)
-		//}
 	}
 
 	end := time.Now().Unix()
@@ -152,7 +148,6 @@ func (s *S3utils) Info(bucket string) []Stat {
 
 func (s *S3utils) All() {
 	start := time.Now().Unix()
-	//buckets := []string{"cmstest", "aws-logs-104818181003-cn-north-1"}
 	var mwg sync.WaitGroup
 	var glacier, standard, sia, rr int64 = 0, 0, 0, 0
 	var glaciern, standardn, sian, rrn int = 0, 0, 0, 0
@@ -163,7 +158,6 @@ func (s *S3utils) All() {
 	if ok == nil {
 		for _, bucket := range bs.Buckets {
 			cnt += 1
-			//fmt.Printf("!!!!debug bucket: %v, %v\n", *bucket.Name, cnt)
 			mwg.Add(1)
 			go func(b string) {
 				defer mwg.Done()
