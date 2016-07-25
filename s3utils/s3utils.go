@@ -142,7 +142,7 @@ func (s *S3utils) Info(bucket string) []Stat {
 
 	end := time.Now().Unix()
 
-	fmt.Printf("\nScan Bucket[%v], Cost: %v\n", bucket, end-start)
+	fmt.Printf("Scan Bucket[%v], Cost: %v\n\n", bucket, end-start)
 	return myinfos
 }
 
