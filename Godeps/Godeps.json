@@ -1,7 +1,10 @@
 {
-	"ImportPath": "aws-lb/tools/s3utils",
+	"ImportPath": "aws-lb",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v74",
+	"Packages": [
+		"aws-lb/tools/s3utils"
+	],
 	"Deps": [
 		{
 			"ImportPath": "github.com/aws/aws-sdk-go/aws",
