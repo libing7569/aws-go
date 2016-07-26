@@ -1,5 +1,5 @@
 {
-	"ImportPath": "aws-lb/s3utils",
+	"ImportPath": "aws-lb/tools/s3utils",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v74",
 	"Deps": [
