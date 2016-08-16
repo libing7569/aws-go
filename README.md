@@ -1,2 +1,2 @@
 # aws-lb
-some aws samples for practise
+some tools focused around easy of use for aws.  
